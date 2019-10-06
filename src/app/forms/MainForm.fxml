@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320" prefWidth="320" styleClass="">
+  <children>
+    <ComboBox AnchorPane.leftAnchor="112" AnchorPane.rightAnchor="8" editable="false" focusTraversable="false" id="chain" layoutX="112" layoutY="56" prefHeight="25" prefWidth="120" promptText="" styleClass="combo-box-base combo-box " value="" visibleRowCount="10">
+      <items xmlns:fx="http://javafx.com/fxml">
+        <FXCollections fx:factory="observableArrayList"/>
+      </items>
+    </ComboBox>
+    <Data cursor="DEFAULT" enabled="1" id="data-chain" visible="1"/>
+    <TableView AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" AnchorPane.topAnchor="88" editable="false" fixedCellSize="-1" focusTraversable="true" id="table" layoutX="8" layoutY="88" prefHeight="240" prefWidth="224" styleClass="table-view " tableMenuButtonVisible="true">
+      <placeholder>
+        <Label/>
+      </placeholder>
+      <columnResizePolicy xmlns:fx="http://javafx.com/fxml">
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+      </columnResizePolicy>
+      <columns>
+        <TableColumn id="id" maxWidth="5000" minWidth="10" prefWidth="50" resizable="true" sortable="false" style="-fx-alignment: center-left; " text="id" visible="true"/>
+        <TableColumn id="target" maxWidth="5000" minWidth="10" prefWidth="50" resizable="true" sortable="false" style="-fx-alignment: center-left; " text="target" visible="true"/>
+        <TableColumn id="prot" maxWidth="5000" minWidth="10" prefWidth="51" resizable="true" sortable="false" style="-fx-alignment: center-left; " text="prot" visible="true"/>
+        <TableColumn id="opt" maxWidth="5000" minWidth="10" prefWidth="50" resizable="true" sortable="false" style="-fx-alignment: center-left; " text="opt" visible="true"/>
+        <TableColumn id="source" maxWidth="5000" minWidth="10" prefWidth="51" resizable="true" sortable="false" style="-fx-alignment: center-left; " text="source" visible="true"/>
+        <TableColumn id="destination" maxWidth="5000" minWidth="10" prefWidth="50" resizable="true" sortable="false" style="-fx-alignment: center-left; " text="destination" visible="true"/>
+      </columns>
+    </TableView>
+    <Data cursor="DEFAULT" enabled="1" id="data-table" visible="1"/>
+    <CheckBox alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="policy" layoutX="8" layoutY="56" prefHeight="24" prefWidth="96" styleClass="check-box " text="Разрешить" textAlignment="LEFT" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="13"/>
+      </font>
+    </CheckBox>
+    <Data cursor="DEFAULT" enabled="1" id="data-policy" visible="1"/>
+    <Button AnchorPane.bottomAnchor="6" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="delete" layoutX="8" layoutY="289" prefHeight="25" prefWidth="24" styleClass="button " text="X" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="13"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="1" id="data-delete" tooltipText="Удалить из таблицы" visible="1"/>
+    <Button AnchorPane.bottomAnchor="6" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="add" layoutX="40" layoutY="289" prefHeight="25" prefWidth="24" styleClass="button " text="+" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="13"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="1" id="data-add" tooltipText="Добавить правила" visible="1"/>
+    <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="save" layoutX="8" layoutY="8" prefHeight="40" prefWidth="50" styleClass="button " text="Сохранить как" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="13"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/export.png" id="data-save" tooltipText="Экспортировать все настройки" visible="1"/>
+    <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="load" layoutX="64" layoutY="8" prefHeight="42" prefWidth="32" styleClass="button " text="Загрузить как" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="13"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/load.png" id="data-load" tooltipText="Импортировать все настройки" visible="1"/>
+  </children>
+</AnchorPane>
