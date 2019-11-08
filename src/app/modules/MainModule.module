@@ -3,13 +3,24 @@
     "singleton": true,
     "author": "merkus",
     "description": "Работа с iptables",
-    "version": "0.1"
+    "version": "0.125",
+    "disabled": false
   },
   "components": {
+    "whitelist": {
+      "type": "script\\storage\\IniStorage",
+      "x": 48,
+      "y": 96,
+      "props": {
+        "path": "whitelist.ini",
+        "autoSave": "1",
+        "multiLineValues": "1"
+      }
+    },
     "fileChooser": {
       "type": "script\\FileChooserScript",
-      "x": 48.0,
-      "y": 16.0,
+      "x": 48,
+      "y": 16,
       "props": {
         "saveDialog": true,
         "filterName": "Все файлы",
@@ -21,8 +32,8 @@
     },
     "fileChooserAlt": {
       "type": "script\\FileChooserScript",
-      "x": 160.0,
-      "y": 16.0,
+      "x": 160,
+      "y": 16,
       "props": {
         "saveDialog": false,
         "filterName": "Все файлы",

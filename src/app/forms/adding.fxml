@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120" prefWidth="240" styleClass="">
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168" prefWidth="400" styleClass="">
   <children>
-    <ComboBox editable="false" focusTraversable="true" id="policy" layoutX="8" layoutY="8" prefHeight="25" prefWidth="104" promptText="" styleClass="combo-box-base combo-box " value="ACCEPT" visibleRowCount="10">
+    <ComboBox editable="false" focusTraversable="true" id="policy" layoutX="8" layoutY="40" prefHeight="25" prefWidth="104" promptText="" styleClass="combo-box-base combo-box " value="ACCEPT" visibleRowCount="10">
       <items xmlns:fx="http://javafx.com/fxml">
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="ACCEPT"/>
@@ -10,30 +10,99 @@
       </items>
     </ComboBox>
     <Data cursor="DEFAULT" enabled="1" id="data-policy" visible="1"/>
-    <TextField AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" alignment="CENTER_LEFT" editable="true" focusTraversable="false" id="ip" layoutX="8" layoutY="40" prefColumnCount="12" prefHeight="32" prefWidth="224" promptText="ip или url веб сайта" styleClass="text-input text-field " text="">
-      <font>
-        <Font name="System Regular" size="13"/>
-      </font>
-    </TextField>
-    <Data cursor="DEFAULT" enabled="1" id="data-ip" visible="1"/>
-    <Button AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="submit" layoutX="8" layoutY="80" prefHeight="32" prefWidth="224" styleClass="button " text="Выполнить" textAlignment="CENTER" underline="false" wrapText="false">
+    <Button AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="submit" layoutX="8" layoutY="128" prefHeight="32" prefWidth="552" styleClass="button " text="Выполнить" textAlignment="CENTER" underline="false" wrapText="false">
       <font>
         <Font name="System Regular" size="13"/>
       </font>
     </Button>
     <Data cursor="DEFAULT" enabled="1" id="data-submit" visible="1"/>
-    <ComboBox AnchorPane.leftAnchor="120" AnchorPane.rightAnchor="8" editable="false" focusTraversable="true" id="type" layoutX="120" layoutY="8" prefHeight="25" prefWidth="112" promptText="" styleClass="combo-box-base combo-box " value="ip" visibleRowCount="10">
+    <ComboBox AnchorPane.leftAnchor="120" AnchorPane.rightAnchor="8" editable="false" focusTraversable="true" id="selectedip" layoutX="120" layoutY="40" prefHeight="25" prefWidth="112" promptText="" styleClass="combo-box-base combo-box " value="ip" visibleRowCount="10">
       <items xmlns:fx="http://javafx.com/fxml">
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="ip"/>
           <String fx:value="proxy"/>
+          <String fx:value="Диапазон портов"/>
         </FXCollections>
       </items>
     </ComboBox>
+    <Data cursor="DEFAULT" enabled="1" id="data-selectedip" visible="1"/>
+    <ComboBox editable="false" focusTraversable="true" id="type" layoutX="8" layoutY="8" prefHeight="26" prefWidth="104" promptText="" styleClass="combo-box-base combo-box " value="filter" visibleRowCount="10">
+      <items xmlns:fx="http://javafx.com/fxml">
+        <FXCollections fx:factory="observableArrayList"/>
+      </items>
+    </ComboBox>
     <Data cursor="DEFAULT" enabled="1" id="data-type" visible="1"/>
-    <org.develnext.jphp.ext.javafx.support.control.NumberSpinner alignment="CENTER_LEFT" arrowsStyle="LEFT_VERTICAL" editable="true" focusTraversable="false" id="portmin" initial="1" layoutX="8" layoutY="40" max="65535" min="1" prefHeight="32" prefWidth="104" step="1" styleClass="spinner arrows-on-left-vertical "/>
-    <Data cursor="DEFAULT" enabled="1" id="data-portmin" visible=""/>
-    <org.develnext.jphp.ext.javafx.support.control.NumberSpinner AnchorPane.leftAnchor="120" AnchorPane.rightAnchor="8" alignment="CENTER_LEFT" arrowsStyle="RIGHT_VERTICAL" editable="true" focusTraversable="false" id="portmax" initial="1" layoutX="120" layoutY="40" max="65535" min="1" prefHeight="32" prefWidth="112" step="1" styleClass="spinner "/>
-    <Data cursor="DEFAULT" enabled="1" id="data-portmax" visible=""/>
+    <ComboBox AnchorPane.leftAnchor="120" AnchorPane.rightAnchor="8" editable="false" focusTraversable="true" id="chain" layoutX="120" layoutY="8" prefHeight="26" prefWidth="112" promptText="" styleClass="combo-box-base combo-box " value="" visibleRowCount="10">
+      <items xmlns:fx="http://javafx.com/fxml">
+        <FXCollections fx:factory="observableArrayList"/>
+      </items>
+    </ComboBox>
+    <Data cursor="DEFAULT" enabled="1" id="data-chain" visible="1"/>
+    <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" backgroundColor="#ffffff" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="addpanelip" layoutX="8" layoutY="72" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="384" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <TextField AnchorPane.leftAnchor="7" AnchorPane.rightAnchor="7" alignment="CENTER_LEFT" editable="true" focusTraversable="false" id="ip" layoutX="8" layoutY="8" prefColumnCount="12" prefHeight="32" prefWidth="224" promptText="ip или url веб сайта" styleClass="text-input text-field " text="">
+          <font>
+            <Font name="System Regular" size="13"/>
+          </font>
+        </TextField>
+        <Data cursor="DEFAULT" enabled="1" id="data-ip" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="13"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-addpanelip" visible="1"/>
+    <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" backgroundColor="#ffffff" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="addpanelproxy" layoutX="8" layoutY="72" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="384" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <org.develnext.jphp.ext.javafx.support.control.NumberSpinner AnchorPane.leftAnchor="87" AnchorPane.rightAnchor="79" alignment="CENTER_LEFT" arrowsStyle="RIGHT_VERTICAL" editable="true" focusTraversable="true" id="port" initial="1" layoutX="88" layoutY="8" max="65535" min="1" prefHeight="32" prefWidth="144" step="1" styleClass="spinner "/>
+        <Data cursor="DEFAULT" enabled="1" id="data-port" visible="1"/>
+        <ComboBox editable="false" focusTraversable="true" id="protocol" layoutX="8" layoutY="8" prefHeight="32" prefWidth="72" promptText="" styleClass="combo-box-base combo-box " value="tcp" visibleRowCount="10">
+          <items xmlns:fx="http://javafx.com/fxml">
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="tcp"/>
+              <String fx:value="udp"/>
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Data cursor="DEFAULT" enabled="1" id="data-protocol" visible="1"/>
+        <CheckBox AnchorPane.rightAnchor="7" alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="ssl" layoutX="312" layoutY="8" prefHeight="32" prefWidth="64" selected="true" styleClass="check-box " text="HTTPS" textAlignment="LEFT" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="13"/>
+          </font>
+        </CheckBox>
+        <Data cursor="DEFAULT" enabled="1" id="data-ssl" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="13"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-addpanelproxy" visible=""/>
+    <Panel AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="48" backgroundColor="#ffffff" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="addpanelforproxy" layoutX="8" layoutY="72" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="344" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <ComboBox editable="false" focusTraversable="true" id="protocolproxy" layoutX="8" layoutY="8" prefHeight="32" prefWidth="72" promptText="" styleClass="combo-box-base combo-box " value="tcp" visibleRowCount="10">
+          <items xmlns:fx="http://javafx.com/fxml">
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="tcp"/>
+              <String fx:value="udp"/>
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Data cursor="DEFAULT" enabled="1" id="data-protocolproxy" visible="1"/>
+        <org.develnext.jphp.ext.javafx.support.control.NumberSpinner alignment="CENTER_LEFT" arrowsStyle="LEFT_VERTICAL" editable="true" focusTraversable="true" id="portmin" initial="1" layoutX="88" layoutY="8" max="65535" min="1" prefHeight="32" prefWidth="88" step="1" styleClass="spinner arrows-on-left-vertical "/>
+        <Data cursor="DEFAULT" enabled="1" id="data-portmin" visible="1"/>
+        <org.develnext.jphp.ext.javafx.support.control.NumberSpinner alignment="CENTER_LEFT" arrowsStyle="RIGHT_VERTICAL" editable="true" focusTraversable="true" id="portmax" initial="0" layoutX="184" layoutY="8" max="65535" min="1" prefHeight="32" prefWidth="88" step="1" styleClass="spinner  "/>
+        <Data cursor="DEFAULT" enabled="1" id="data-portmax" visible="1"/>
+        <CheckBox AnchorPane.rightAnchor="-1" alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="ssl_for" layoutX="280" layoutY="8" prefHeight="32" prefWidth="64" selected="true" styleClass="check-box " text="HTTPS" textAlignment="LEFT" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="13"/>
+          </font>
+        </CheckBox>
+        <Data cursor="DEFAULT" enabled="1" id="data-ssl_for" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="13"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-addpanelforproxy" visible=""/>
   </children>
 </AnchorPane>

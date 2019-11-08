@@ -1,0 +1,13 @@
+{
+  "uid": "TwitterBootstrap2",
+  "name": "Twitter Bootstrap 2",
+  "version": "",
+  "description": "Светлая тема в стиле Bootstrap 2.",
+  "author": "Twitter, DevelNext",
+  "authorSite": "http://develnext.org",
+  "file": "",
+  "scopes": [
+    "gui",
+    "ide\\project\\behaviours\\GuiFrameworkProjectBehaviour"
+  ]
+}

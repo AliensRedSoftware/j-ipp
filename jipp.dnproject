@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project author="merkus" authorOS="Linux" createdAt="1570024953781" ideName="DevelNext" ideVersion="16.7.0" ideVersionHash="2017103112" name="jipp" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1570348954762">
+<project author="merkus" authorOS="Linux" createdAt="1570024953781" ideName="DevelNext" ideVersion="16.7.0" ideVersionHash="2017103112" name="jipp" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1573255161783">
   <tree>
     <expanded>
     <path src=""/>
       <path src="/src"/>
+      <path src="/src/app"/>
+      <path src="/src/app/forms"/>
     </expanded>
   </tree>
   <openedFiles>
@@ -11,6 +13,11 @@
     <file src="src/app/modules/MainModule.php"/>
     <file selected="1" src="src/app/forms/MainForm.php"/>
     <file src="src/app/forms/adding.php"/>
+    <file src="src/app/forms/st.php"/>
+    <file src="src/app/forms/Categoria.php"/>
+    <file src="src/app/forms/whitelist.php"/>
+    <file src="src/app/forms/webadd.php"/>
+    <file src=".gitignore"/>
   </openedFiles>
   <files/>
   <behaviours>

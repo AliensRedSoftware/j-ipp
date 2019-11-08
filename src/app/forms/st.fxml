@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88" prefWidth="320" styleClass="">
+  <children>
+    <Button AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="success" layoutX="8" layoutY="48" prefHeight="32" prefWidth="304" styleClass="button " text="Создать" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="13"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="1" id="data-success" visible="1"/>
+    <TextField AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" alignment="CENTER" editable="true" focusTraversable="true" id="name" layoutX="8" layoutY="8" prefColumnCount="12" prefHeight="32" prefWidth="304" promptText="Название категорий" styleClass="text-input text-field " text="">
+      <font>
+        <Font name="System Regular" size="13"/>
+      </font>
+    </TextField>
+    <Data cursor="DEFAULT" enabled="1" id="data-name" visible="1"/>
+  </children>
+</AnchorPane>
